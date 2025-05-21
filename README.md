@@ -120,43 +120,6 @@ Sistem ini menggunakan 11 tabel utama:
 
 Untuk penjelasan lebih detail tentang struktur database, silakan lihat dokumentasi di folder `documentation/`.
 
-## Pengembangan
-
-### Menjalankan Development Server
-
-```bash
-php artisan serve
-npm run dev
-```
-
-### Migrasi Database
-
-```bash
-php artisan migrate
-```
-
-### Seed Database
-
-```bash
-php artisan db:seed
-```
-
-### Testing
-
-```bash
-php artisan test
-```
-
-## Kontribusi
-
-Kami sangat terbuka untuk kontribusi! Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
-
-1. Fork repository
-2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
-3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`)
-4. Push ke branch (`git push origin feature/AmazingFeature`)
-5. Buka Pull Request
-
 ## Lisensi
 
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
