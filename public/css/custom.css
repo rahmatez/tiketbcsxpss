@@ -1,0 +1,837 @@
+/* Custom CSS for Pundit FC */
+
+/* Global Styles */
+:root {
+    /* BCS x PSS Sleman Colors */
+    --primary-color: #0d6a37; /* Hijau PSS Sleman */
+    --secondary-color: #000000; /* Hitam */
+    --accent-color: #ffffff; /* Putih */
+    --danger-color: #ea4335;
+    --dark-color: #202124;
+    --light-color: #f8f9fa;
+    --gray-color: #5f6368;
+    --light-gray: #dadce0;
+    --transition-speed: 0.3s;
+}
+
+/* Home Page Specific Styles */
+/* Hero section has been removed */
+
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Hero section media queries have been removed */
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* Countdown section media queries have been removed */
+
+    .countdown-number {
+        font-size: 1.8rem;
+    }
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.filter-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown section  */
+
+.countdown-section {
+    padding: 60px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url("../images/Background/bg.jpeg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.countdown-item {
+    min-width: 80px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes scrollAnnouncement {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--dark-color);
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-primary:hover {
+    background-color: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--gray-color);
+    border-color: var(--gray-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.btn-secondary:hover {
+    background-color: #4d545a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles - BCS x PSS Sleman Theme */
+.navbar {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+        to right,
+        var(--secondary-color),
+        #075028,
+        var(--primary-color) 150%
+    );
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    position: relative;
+    color: var(--accent-color) !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* BCS x PSS Brand Special Styling */
+.navbar-brand span {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-brand span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--accent-color),
+        transparent
+    );
+}
+
+/* Special icon styling for futbol icon */
+.navbar-brand i.fas.fa-futbol {
+    color: var(--accent-color);
+    filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+    animation: slow-spin 10s infinite linear;
+}
+
+@keyframes slow-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    padding: 8px 16px;
+    margin: 0 5px;
+    transition: all var(--transition-speed) ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
+    border-bottom: 2px solid var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Additional Navbar Elements - BCS x PSS Sleman Theme */
+.navbar .dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-toggler {
+    border: 2px solid var(--accent-color) !important;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Active nav link highlighting */
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Navbar Search Form Styling */
+.navbar-search {
+    width: 300px;
+}
+
+.navbar-search .search-input {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.navbar-search .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-search .search-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-search .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar-search .btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media queries untuk navbar search responsif */
+@media (max-width: 992px) {
+    .navbar-search {
+        display: none !important;
+    }
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+
+.card-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.card-img-top {
+    transition: all 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Game Cards */
+.game-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--light-gray);
+    padding: 15px;
+}
+
+.game-card .teams {
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.game-card .teams .vs {
+    position: relative;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.game-image-container {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.game-date-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Badges */
+.badge {
+    padding: 6px 10px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Game Detail Page */
+.game-hero {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.game-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
+}
+
+.game-hero-content {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+}
+
+.teams-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.team-name {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.vs-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+.match-details {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.match-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.match-detail-item i {
+    color: var(--accent-color);
+}
+
+/* Ticket Selection */
+.ticket-selection-card {
+    margin-top: 30px;
+}
+
+.ticket-category-select {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    border: 2px solid var(--light-gray);
+}
+
+.ticket-category-select:hover,
+.ticket-category-select.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(26, 115, 232, 0.05);
+}
+
+.ticket-category-select.selected {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* My Tickets Page */
+.ticket-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 30px;
+    height: 15px;
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}
+
+.ticket-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 30px;
+    height: 15px;
+    background-color: #f5f5f5;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 1;
+}
+
+.ticket-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px;
+    position: relative;
+}
+
+.ticket-body {
+    padding: 20px;
+    position: relative;
+}
+
+.ticket-body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    border-left: 2px dashed var(--light-gray);
+}
+
+.ticket-footer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-top: 1px dashed var(--light-gray);
+}
+
+/* Countdown Timer */
+.countdown-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.countdown-item {
+    text-align: center;
+    width: 70px;
+}
+
+.countdown-value {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 60px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-label {
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: var(--gray-color);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(
+        to right,
+        var(--secondary-color),
+        #075028,
+        var(--primary-color) 95%
+    );
+    color: white;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* QR Code Container */
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.qr-code-container svg {
+    margin: 15px 0;
+}
+
+.qr-code-label {
+    font-weight: 600;
+    color: var(--gray-color);
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .game-hero {
+        height: 250px;
+    }
+
+    .team-name {
+        font-size: 1.5rem;
+    }
+
+    .countdown-container {
+        gap: 10px;
+    }
+
+    .countdown-item {
+        width: 60px;
+    }
+
+    .countdown-value {
+        width: 60px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Menu */
+@media (max-width: 991px) {
+    .navbar .nav-item .nav-link {
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .dropdown-menu {
+        text-align: center;
+        border: 2px solid var(--primary-color);
+        background-color: var(--secondary-color);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: var(--accent-color);
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus {
+        background-color: var(--primary-color);
+        color: var(--accent-color);
+    }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+    z-index: 9999;
+}
+
+.loading-spinner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--primary-color);
+    border-color: var(--primary-color) transparent var(--primary-color)
+        transparent;
+    animation: loading-spinner 1.2s linear infinite;
+}
+
+@keyframes loading-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 9998;
+    display: none;
+}
+
+.loading-overlay.show {
+    display: block;
+}
+
+/* Payment Detail Page */
+.payment-status-badge {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+}
+
+.payment-detail-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.payment-detail-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.payment-info-table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.payment-history-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+/* Timeline Style for Payment Status */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #e0e0e0;
+    left: 15px;
+    margin-left: -1.5px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.timeline-badge {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: -45px;
+    margin-left: 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-badge i {
+    font-size: 12px;
+}
+
+.timeline-content {
+    padding: 0 15px 0 15px;
+    position: relative;
+}
+
+.timeline-content h6 {
+    margin: 0 0 5px;
+    color: #333;
+    font-weight: 600;
+}
+
+.timeline-date {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #999;
+}

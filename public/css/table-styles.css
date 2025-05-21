@@ -1,0 +1,135 @@
+/* Tabel Admin Styles */
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 0;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    text-align: left;
+    border-top: 1px solid #dee2e6;
+}
+
+.admin-table thead th {
+    vertical-align: bottom;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #495057;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Progress bar dalam tabel */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    margin: 0;
+}
+
+.progress-bar {
+    border-radius: 4px;
+}
+
+/* Badge styling */
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.45rem;
+    text-transform: uppercase;
+}
+
+.bg-success {
+    background-color: var(--admin-success) !important;
+    color: white;
+}
+
+.bg-danger {
+    background-color: var(--admin-danger) !important;
+    color: white;
+}
+
+.bg-warning {
+    background-color: var(--admin-warning) !important;
+    color: #212529;
+}
+
+.bg-info {
+    background-color: var(--admin-info) !important;
+    color: white;
+}
+
+.bg-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Responsive table */
+@media (max-width: 767.98px) {
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Card styles */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.card-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
