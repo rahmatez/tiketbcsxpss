@@ -1,7 +1,7 @@
 # Sistem Pemesanan Tiket dengan QR Code BCSXPSS
 
 <p align="center">
-  <img src="public/images/logo.png" alt="Logo Pesan Tiket QR Code" width="200">
+  <img src="public/images/bcsxpsslogo.jpeg" alt="Logo Pesan Tiket QR Code" width="200">
 </p>
 
 ## Tentang Aplikasi
