@@ -1,4 +1,4 @@
-# Sistem Pemesanan Tiket dengan QR Code
+# Sistem Pemesanan Tiket dengan QR Code BCSXPSS
 
 <p align="center">
   <img src="public/images/logo.png" alt="Logo Pesan Tiket QR Code" width="200">
